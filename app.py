@@ -252,6 +252,17 @@ def remain_info():
         "developer": "GENIUS HACKER"
     }
     return jsonify(data)
+    @app.route('/')
+def home():
+    return jsonify({
+        "status": "online",
+        "name": "Gobinda API",
+        "version": "1.0",
+        "endpoints": {
+            "like": "/like?uid=UID&region=IND&key=Gobinda",
+            "remain": "/remain"
+        }
+    })
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
