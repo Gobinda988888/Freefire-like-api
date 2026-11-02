@@ -252,7 +252,8 @@ def remain_info():
         "developer": "GENIUS HACKER"
     }
     return jsonify(data)
-    @app.route('/')
+
+@app.route('/')
 def home():
     return jsonify({
         "status": "online",
@@ -263,6 +264,7 @@ def home():
             "remain": "/remain"
         }
     })
+
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
